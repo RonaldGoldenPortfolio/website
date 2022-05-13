@@ -1,0 +1,289 @@
+<nav class="navbar navbar-expand-lg navbar-dark" style="padding-top: .5%;">
+
+
+    <img src="../assets/logoNobackground.png" width="15%" style="min-width: 65px;">
+
+    <button class="navbar-toggler custom-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon "></span>
+    </button>
+    <div class="collapse navbar-collapse" style="margin-top: auto;" id="navbarNav">
+
+        <ul class="navbar-nav d-lg-none" style="margin: auto;">
+            <li class="nav-item" style="width: 100%; text-align: center;">
+                <a class="nav-link " [ngClass]="{'active':x==='Home'}" aria-current="page" (click)="x='Home'">Home</a>
+            </li>
+            <li class="nav-item " style="width: 100%; text-align: center;">
+                <a class="nav-link" [ngClass]="{'active':x==='Services'}" (click)="x='Services'">Services</a>
+            </li>
+            <li class="nav-item " style="width: 100%; text-align: center;">
+                <a class="nav-link" [ngClass]="{'active':x==='AboutUs'}" (click)="x='AboutUs'">Contact Us</a>
+            </li>
+        </ul>
+        <ul class="navbar-nav d-none d-lg-flex justify-content-around" style="width: 70%; margin: auto;">
+            <li class="nav-item" style="text-align: left;">
+                <a class="nav-link " [ngClass]="{'active':x==='Home'}" aria-current="page" (click)="x='Home'">Home</a>
+            </li>
+            <li class="nav-item" style="text-align: left;">
+                <a class="nav-link" [ngClass]="{'active':x==='Services'}" (click)="x='Services'">Services</a>
+            </li>
+            <li class="nav-item" style="text-align: left;">
+                <a class="nav-link" [ngClass]="{'active':x==='AboutUs'}" (click)="x='AboutUs'"
+                    style="white-space: nowrap;">Contact Us</a>
+            </li>
+
+        </ul>
+        <h3 class="d-lg-none colored" style="margin: auto;text-align: center;">256-452-5192</h3>
+        <h3 class="d-none d-lg-block colored" style="margin-right: 1%;white-space: nowrap;">256-452-5192</h3>
+    </div>
+
+</nav>
+
+<div class="sider" *ngIf="x=='Home'" style="padding-top: 3%;" [@inOutAnimation]>
+    <div class="container" style="padding-top: 5%; width: 90%;margin: auto;">
+        <h2 style="text-align: center;background: linear-gradient(to left, rgb(176, 47, 30),
+        rgb(256, 102, 0));
+    -webkit-text-fill-color:  rgba(255, 255, 255, 0);
+    -webkit-background-clip: text;">Custom Software</h2>
+
+        <p style="font-size:26px;text-align: center;">
+            Advance your business systems for the efficiency to succeed in the modern world
+        </p>
+
+        <div class="d-grid gap-2 col-12-sm col-2-md  " style="margin: auto;padding-top: 5%;text-align: center;height: 100px;">
+
+            <a class="  d-lg-none col-12 colored" [ngClass]="{'active':x==='Home'}" (click)="x='AboutUs'"  style="height: 100%;margin: auto;padding-top: 3%;border-radius: 50px;">Contact Us</a>
+            <a class="  d-none d-lg-block col-3 colored" [ngClass]="{'active':x==='Home'}" (click)="x='AboutUs'" style="height: 100%;margin: auto;padding: 1%;border-radius: 50px;">Contact
+                Us</a>
+        </div>
+    </div>
+    <div class=" text-center text-white footer" style="padding-top: 5%;">
+        <!-- Grid container -->
+        <div class="container">
+            <!-- Section: Social media -->
+            <section style="margin: 0%;">
+                <!-- Facebook -->
+
+
+                <a class="btn btn-primary btn-floating" style="background-color: #3b5998;"
+                    href="https://www.facebook.com/Williamson-Tech-Solutions-100100249366065" role="button">
+                    <fa-icon [icon]="faFacebook"></fa-icon>
+                </a>
+                <!-- Twitter -->
+                <a class="btn btn-primary btn-floating" style="background-color: #55acee;"
+                    href="https://twitter.com/tech_williamson" role="button">
+                    <fa-icon [icon]="faTwitter"></fa-icon>
+                </a>
+
+
+                <!-- Youtube -->
+                <a class="btn btn-primary btn-floating" style="background-color: #c4302b;"
+                    href="https://www.youtube.com/channel/UCOmupm7qBxXuCjdrEyyTXTg" role="button">
+                    <fa-icon [icon]="faYoutube">
+                    </fa-icon>
+                </a>
+
+                <!-- Linkedin -->
+                <a class="btn btn-primary btn-floating" style="background-color: #0082ca;"
+                    href="https://www.linkedin.com/company/williamson-tech-solutions/" role="button">
+                    <fa-icon [icon]="faLinkedin"></fa-icon>
+                </a>
+
+            </section>
+            <!-- Section: Social media -->
+        </div>
+        <!-- Grid container -->
+
+        <!-- Copyright -->
+        <div class=" text-center small" style="padding: 0%;">
+            © 2022 Copyright:
+            <a class="text-white" href="https://williamsontechsolutions.com/">Williamson Tech Solutions</a>
+        </div>
+        <!-- Copyright -->
+    </div>
+</div>
+
+
+
+
+
+
+
+<div *ngIf="x=='Services'" [@inOutAnimation]>
+
+    <div class="container">
+        <h2 style="text-align: center;background: linear-gradient(to left, rgb(176, 47, 30),
+        rgb(256, 102, 0));
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;">Custom Software Services</h2>
+        <div class="row row-cols-1 row-cols-md-2  g-2 g-lg-2">
+            <div class="card col">
+
+                <div class="card-body">
+                    <p class="card-text colored" style="text-align: center;font-size: 35px;">Customer-Facing Applications
+                    </p>
+                    <p style="font-size: 35px;text-align: center;">Applications that customers use to engage with
+                        your business.</p>
+                </div>
+            </div>
+            <div class="card col">
+
+                <div class="card-body">
+                    <p class="card-text colored" style="text-align: center;font-size: 35px;">Moblie Applications</p>
+                    <p style="font-size: 35px;text-align: center;">Applications that are designed to be used on
+                        any/specific moblie device</p>
+
+                </div>
+
+
+            </div>
+            <div class="card col">
+                <div class="card-body">
+                    <p class="card-text colored" style="text-align: center;font-size: 35px;">Batch Processing</p>
+                    <p style="font-size: 35px;text-align: center;">Software designed to handle data processing on a
+                        recurring</p>
+
+                </div>
+            </div>
+            <div class="card col">
+
+                <div class="card-body">
+
+                    <p class="card-text colored" style="text-align: center;font-size: 35px;">Internal  Applications</p>
+                    <p style="font-size: 35px;text-align: center;">Applications that employees use to handle business related
+                        operations</p>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class=" text-center text-white " style="padding-top: 5%;">
+        <!-- Grid container -->
+        <div class="container">
+            <!-- Section: Social media -->
+            <section style="margin: 0%;">
+                <!-- Facebook -->
+
+
+                <a class="btn btn-primary btn-floating" style="background-color: #3b5998;"
+                    href="https://www.facebook.com/Williamson-Tech-Solutions-100100249366065" role="button">
+                    <fa-icon [icon]="faFacebook"></fa-icon>
+                </a>
+                <!-- Twitter -->
+                <a class="btn btn-primary btn-floating" style="background-color: #55acee;"
+                    href="https://twitter.com/tech_williamson" role="button">
+                    <fa-icon [icon]="faTwitter"></fa-icon>
+                </a>
+
+
+                <!-- Youtube -->
+                <a class="btn btn-primary btn-floating" style="background-color: #c4302b;"
+                    href="https://www.youtube.com/channel/UCOmupm7qBxXuCjdrEyyTXTg" role="button">
+                    <fa-icon [icon]="faYoutube">
+                    </fa-icon>
+                </a>
+
+                <!-- Linkedin -->
+                <a class="btn btn-primary btn-floating" style="background-color: #0082ca;"
+                    href="https://www.linkedin.com/company/williamson-tech-solutions/" role="button">
+                    <fa-icon [icon]="faLinkedin"></fa-icon>
+                </a>
+
+            </section>
+            <!-- Section: Social media -->
+        </div>
+        <!-- Grid container -->
+
+        <!-- Copyright -->
+        <div class=" text-center small" style="padding: 0%;">
+            © 2022 Copyright:
+            <a class="text-white" href="https://williamsontechsolutions.com/">Williamson Tech Solutions</a>
+        </div>
+        <!-- Copyright -->
+    </div>
+</div>
+<div *ngIf="x=='AboutUs'" [@inOutAnimation]>
+    <div class="container">
+
+        <div class="row justify-content-center">
+            <div class="col-10 col-md-4" [formGroup]="reactiveForm">
+                <div class="row">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" formControlName="name" placeholder=""
+                        class="form-control form-control-sm">
+
+                    <label for="phone">Phone</label>
+                    <input [type]="phone" id="phone" name="phone" formControlName="phone"
+                        class="form-control form-control-sm">
+
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" formControlName="email" placeholder=""
+                        class="form-control form-control-sm">
+
+                    <label for="companyName">Company</label>
+                    <input type="text" id="companyName" name="companyName" formControlName="companyName" placeholder=""
+                        class="form-control form-control-sm">
+
+                </div>
+
+
+
+
+            </div>
+        </div>
+        <div class="send" style="margin-top: 2%;margin-bottom: 0%;" style="margin: auto;padding-top: 2%;text-align: center;height: 100px;">
+            <!-- <a class="  d-lg-none col-12 colored" [ngClass]="{'active':x==='AboutUs'}" (click)="send()"  style="height: 100%;margin: auto;padding-top: 3%;">Contact Us</a> -->
+
+            <a class=" col-12 colored"  [ngClass]="{'active':x==='AboutUs'}" style="height: 100%;margin: auto;padding: 1%;padding-left: 3%;padding-right: 3%;border-radius: 50px;"
+                (click)="send()">SEND</a>
+                
+        </div>
+
+    </div>
+    <div class=" text-center text-white" style="padding-top: 5%;">
+        <!-- Grid container -->
+        <div class="container">
+            <!-- Section: Social media -->
+            <section style="margin: 0%;">
+                <!-- Facebook -->
+
+
+                <a class="btn btn-primary btn-floating" style="background-color: #3b5998;"
+                    href="https://www.facebook.com/Williamson-Tech-Solutions-100100249366065" role="button">
+                    <fa-icon [icon]="faFacebook"></fa-icon>
+                </a>
+                <!-- Twitter -->
+                <a class="btn btn-primary btn-floating" style="background-color: #55acee;"
+                    href="https://twitter.com/tech_williamson" role="button">
+                    <fa-icon [icon]="faTwitter"></fa-icon>
+                </a>
+
+
+                <!-- Youtube -->
+                <a class="btn btn-primary btn-floating" style="background-color: #c4302b;"
+                    href="https://www.youtube.com/channel/UCOmupm7qBxXuCjdrEyyTXTg" role="button">
+                    <fa-icon [icon]="faYoutube">
+                    </fa-icon>
+                </a>
+
+                <!-- Linkedin -->
+                <a class="btn btn-primary btn-floating" style="background-color: #0082ca;"
+                    href="https://www.linkedin.com/company/williamson-tech-solutions/" role="button">
+                    <fa-icon [icon]="faLinkedin"></fa-icon>
+                </a>
+
+            </section>
+            <!-- Section: Social media -->
+        </div>
+        <!-- Grid container -->
+
+        <!-- Copyright -->
+        <div class=" text-center small" style="padding: 0%;">
+            © 2022 Copyright:
+            <a class="text-white" href="https://williamsontechsolutions.com/">Williamson Tech Solutions</a>
+        </div>
+        <!-- Copyright -->
+    </div>
+</div>
