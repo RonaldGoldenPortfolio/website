@@ -3,6 +3,7 @@ import { faFacebook,faTwitter,faLinkedin,faYoutube,faInstagram,faGoogle } from '
 import { trigger, state, style, animate, transition } from '@angular/animations';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { catchError } from 'rxjs/internal/operators/catchError';
 
 @Component({
   selector: 'app-root',
@@ -103,22 +104,13 @@ reactiveForm!: FormGroup;
       desc:this.reactiveForm.get('desc')?.value,
       phone:this.reactiveForm.get('phone')?.value,
     }
-    var option = {    'Authorization': 'Basic edea96d20a05f88652d298c8af62caa9',
-     'Content-Length' : JSON.stringify(x).length, 'Content-Type': 'plain/text', 'body' : JSON.stringify(x)};
-    // this.http.get<any>(this.baseURL).subscribe((data) => console.log(data));
-    // this.http.request('POST', 'https://api.twilio.com/2010-04-01/Accounts/AC0d4846af1a4d57f312826f7752b52be7Messages.json', option).subscribe((data) => console.log("sent"));
-  
-    fetch('https://api.twilio.com/2010-04-01/Accounts/AC0d4846af1a4d57f312826f7752b52be7/Messages.json', {
-    method: 'POST',
-    headers: {
-        'Authorization': 'Basic ' + btoa('AC0d4846af1a4d57f312826f7752b52be7:edea96d20a05f88652d298c8af62caa9')
-    },
-    body: new URLSearchParams({
-        'To': ' 12564525192',
-        'MessagingServiceSid': 'MG7e857fae697c6b2959c8cfbf7d3c77cc',
-        'Body': JSON.stringify(x)
-    })
-});
+    const httpOptions = {
+      headers: new HttpHeaders({
+        'Content-Type':  'application/json'
+      })
+    };
+    this.http.post("https://e55u5xibrhu3qe5msdrkco2yka0tcbyn.lambda-url.us-east-1.on.aws/",x,httpOptions).subscribe(()=>console.log("here"));
+     
 alert("This infomation has been sent to the team and will be process asap.lease reframe from sending more than one request");
   }
 
